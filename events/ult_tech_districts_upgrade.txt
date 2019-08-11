@@ -1,0 +1,281 @@
+namespace = ult_tech_districts_upgrade
+
+planet_event = {
+    id = ult_tech_districts_upgrade.1
+    title = "ult_tech_districts_upgrade.1.name"
+    desc = "ult_tech_districts_upgrade.1.desc"
+    picture = GFX_evt_ult_utopia_infrastructure
+    show_sound = event_primitive_civilization
+    is_triggered_only = yes
+
+    immediate = {
+        # City districts replacement
+        while = {
+            limit = {
+                OR = {
+                    has_district = district_city
+                    has_district = district_rw_city
+                    has_district = district_hab_housing
+                }
+            }
+
+            if = {
+                limit = {
+                    has_district = district_city
+                }
+                remove_district = district_city
+            }
+            else_if = {
+                limit = {
+                    has_district = district_rw_city
+                }
+                remove_district = district_rw_city
+            }
+            else_if = {
+                limit = {
+                    has_district = district_hab_housing
+                }
+                remove_district = district_hab_housing
+            }
+
+            if = {
+                limit = { is_planet_class = pc_ringworld_habitable }
+                add_district = district_ult_rw_utopia_arcology
+            }
+            else_if = {
+                limit = { is_planet_class = pc_habitat }
+                add_district = district_ult_utopia_arcology
+            }
+            else = {
+                add_district = district_ult_utopia_arcology
+            }
+        }
+
+        # Generator district replacements
+        while = {
+            limit = {
+                OR = {
+                    has_district = district_generator
+                    has_district = district_generator_uncapped
+                    has_district = district_rw_generator
+                    has_district = district_hab_energy
+                    has_district = district_rw_science
+                    has_district = district_hab_science
+                }
+            }
+
+            if = {
+                limit = {
+                    has_district = district_generator
+                }
+                remove_district = district_generator
+            }
+            else_if = {
+                limit = {
+                    has_district = district_generator_uncapped
+                }
+                remove_district = district_generator_uncapped
+            }
+            else_if = {
+                limit = {
+                    has_district = district_rw_generator
+                }
+                remove_district = district_rw_generator
+            }
+            else_if = {
+                limit = {
+                    has_district = district_hab_energy
+                }
+                remove_district = district_hab_energy
+            }
+            else_if = {
+                limit = {
+                    has_district = district_rw_science
+                }
+                remove_district = district_rw_science
+            }
+            else_if = {
+                limit = {
+                    has_district = district_hab_science
+                }
+                remove_district = district_hab_science
+            }
+
+            if = {
+                limit = { is_planet_class = pc_ringworld_habitable }
+                add_district = district_ult_rw_dark_energy_power_center
+            }
+            else_if = {
+                limit = { is_planet_class = pc_habitat }
+                add_district = district_ult_dark_energy_power_center
+            }
+            else = {
+                add_district = district_ult_dark_energy_power_center
+            }
+        }
+
+        # Mining district replacements
+        while = {
+            limit = {
+                OR = {
+                    has_district = district_mining
+                    has_district = district_mining_uncapped
+                    has_district = district_rw_commercial
+                    has_district = district_hab_commercial
+                    has_district = district_hab_mining
+                }
+            }
+
+            if = {
+                limit = {
+                    has_district = district_mining
+                }
+                remove_district = district_mining
+            }
+            else_if = {
+                limit = {
+                    has_district = district_mining_uncapped
+                }
+                remove_district = district_mining_uncapped
+            }
+            else_if = {
+                limit = {
+                    has_district = district_rw_commercial
+                }
+                remove_district = district_rw_commercial
+            }
+            else_if = {
+                limit = {
+                    has_district = district_hab_commercial
+                }
+                remove_district = district_hab_commercial
+            }
+            else_if = {
+                limit = {
+                    has_district = district_hab_mining
+                }
+                remove_district = district_hab_mining
+            }
+
+            if = {
+                limit = { is_planet_class = pc_ringworld_habitable }
+                add_district = district_ult_rw_industrial_zone
+            }
+            else_if = {
+                limit = { is_planet_class = pc_habitat }
+                add_district = district_ult_automatic_mining_zone
+            }
+            else = {
+                add_district = district_ult_automatic_mining_zone
+            }
+        }
+
+        # Farming districts replacement
+        while = {
+            limit = {
+                OR = {
+                    has_district = district_farming
+                    has_district = district_farming_uncapped
+                    has_district = district_rw_farming
+                    has_district = district_hab_cultural
+                }
+            }
+
+            if = {
+                limit = {
+                    has_district = district_rw_farming
+                }
+                remove_district = district_rw_farming
+            }
+            else_if = {
+                limit = {
+                    has_district = district_farming_uncapped
+                }
+                remove_district = district_farming_uncapped
+            }
+            else_if = {
+                limit = {
+                    has_district = district_farming
+                }
+                remove_district = district_farming
+            }
+            else_if = {
+                limit = {
+                    has_district = district_hab_cultural
+                }
+                remove_district = district_hab_cultural
+            }
+
+            if = {
+                limit = { is_planet_class = pc_ringworld_habitable }
+                add_district = district_ult_rw_nano_garden_district
+            }
+            else_if = {
+                limit = { is_planet_class = pc_habitat }
+                add_district = district_ult_utopia_arcology
+            }
+            else = {
+                add_district = district_ult_nano_garden_district
+            }
+        }
+    }
+
+    option = {
+        name = ult_tech_districts_upgrade.1.a
+    }
+}
+
+planet_event = {
+    id = ult_tech_districts_upgrade.2
+    title = "ult_tech_districts_upgrade.2.name"
+    desc = "ult_tech_districts_upgrade.2.desc"
+    picture = GFX_evt_ult_utopia_infrastructure
+    show_sound = event_primitive_civilization
+    is_triggered_only = yes
+
+    immediate = {
+        # City districts replacement
+        while = {
+            limit = {
+                has_district = district_arcology_housing
+            }
+
+            remove_district = district_arcology_housing
+            add_district = district_ult_ecu_utopia_arcology
+        }
+
+        # Arms industry districts replacement
+        while = {
+            limit = {
+                has_district = district_arcology_arms_industry
+            }
+
+            remove_district = district_arcology_arms_industry
+            add_district = district_ult_commercial_center
+        }
+
+        # Civilian industry districts replacement
+        while = {
+            limit = {
+                has_district = district_arcology_civilian_industry
+            }
+
+            remove_district = district_arcology_civilian_industry
+            add_district = district_ult_industrial_zone
+        }
+
+        # Leisure district replacement
+        while = {
+            limit = {
+                has_district = district_arcology_leisure
+            }
+
+            remove_district = district_arcology_leisure
+            add_district = district_ult_science_district
+        }
+    }
+
+    option = {
+        name = ult_tech_districts_upgrade.2.a
+    }
+}

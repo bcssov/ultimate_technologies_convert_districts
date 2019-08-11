@@ -1,0 +1,12 @@
+﻿l_english:
+ decision_ult_utopia_infrastructure_upgrade:0 "Utopia Infrastructure Upgrade"
+ decision_ult_utopia_infrastructure_upgrade_desc:0 "Utopia is never just a dream to us, with scientific development, we are now able to achieve the ability to make our dream come true.\n\nThis upgrades all existing buildings on the planet with Utopian ones." 
+ ult_tech_districts_upgrade.1.name:0 "Utopia World Constructed"
+ ult_tech_districts_upgrade.1.desc:0 "By investing a great deal of resources and meticulous technology applications. Our local colony has been successfully turned into an Utopia World!\n\nThrough hard work all the districts have been replaced on the planet with Utopian ones."
+ ult_tech_districts_upgrade.1.a:0 "A promised world."
+ decision_ult_utopia_infrastructure_upgrade_ecu:0 "Utopia Infrastructure Upgrade"
+ decision_ult_utopia_infrastructure_upgrade_ecu_desc:0 "Utopia is never just a dream to us, with scientific development, we are now able to achieve the ability to make our dream come true.\n\nThis upgrades all existing buildings on the planet with Utopian ones." 
+ ult_tech_districts_upgrade.2.name:0 "Utopia World Constructed"
+ ult_tech_districts_upgrade.2.desc:0 "By investing a great deal of resources and meticulous technology applications. Our local colony has been successfully turned into an Utopia World!\n\nThrough hard work all the districts have been replaced on the planet with Utopian ones."
+ ult_tech_districts_upgrade.2.a:0 "A promised world."
+ decision_ult_utopia_infrastructure_upgrade_no_districts:0 "$TRIGGER_FAIL$Utopia Infrastructure is a complete planetry change. It requires for it to be enacted on an already developed planet."
